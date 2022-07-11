@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+
+    <h1>Compose</h1>
+    <!-- class="form-inline" -->
+    <form action="/compose" method="post">
+        <!-- mx-sm-3 mb-2 -->
+        <div class="form-group ">
+            <label for="postTitle">Title</label>
+            <input type="text" name="postTitle" class="form-control compose-input" required>
+
+            <label for="postBody">Post</label>
+            <textarea name="postBody" class="form-control compose-input" rows="5" cols="50" required></textarea>
+        </div>
+        <button type="submit" name="button" class="btn btn-primary btn-custom">Publish</button>
+
+    </form>
+
+    <%- include("partials/footer"); -%>
