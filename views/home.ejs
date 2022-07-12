@@ -3,4 +3,15 @@
     <p>
         <%= startingContent %>
     </p>
-    <%- include("partials/footer"); -%>
+    <!-- C-12 and c-14 Logging post -->
+    <% posts.forEach(post=>{ %>
+        <h1>
+            <%= post.title %>
+        </h1>
+        <p>
+            <!-- slice also works -->
+            <%= post.content.substring(0,100)+"..." %>
+                <a class="read-more-link" href="/posts/<%= post.title %>">Read More</a>
+        </p>
+        <% }) %>
+            <%- include("partials/footer"); -%>

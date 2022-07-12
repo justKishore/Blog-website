@@ -6,10 +6,15 @@
         <!-- mx-sm-3 mb-2 -->
         <div class="form-group ">
             <label for="postTitle">Title</label>
-            <input type="text" name="postTitle" class="form-control compose-input" required>
+            <!-- custom required msg -->
+            <input type="text" name="postTitle" class="form-control compose-input" required
+                oninvalid="this.setCustomValidity('Post title can&#8216;t be empty')"
+                oninput="this.setCustomValidity('')" />
 
             <label for="postBody">Post</label>
-            <textarea name="postBody" class="form-control compose-input" rows="5" cols="50" required></textarea>
+            <textarea name="postBody" class="form-control compose-input" rows="5" cols="50" required
+                oninvalid="this.setCustomValidity('Post content can&#8216;t be empty')"
+                oninput="this.setCustomValidity('')" /></textarea>
         </div>
         <button type="submit" name="button" class="btn btn-primary btn-custom">Publish</button>
 
